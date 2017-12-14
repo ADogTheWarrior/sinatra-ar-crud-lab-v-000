@@ -30,7 +30,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts/:id/edit' do
-test "params= #{params}"
     @post = Post.find(params[:id])
     erb :edit
   end
