@@ -25,7 +25,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts/:id' do
-puts "params= #{params}"
     @post = Post.find(params[:id])
     erb :show
   end
@@ -43,6 +42,7 @@ puts "params= #{params}"
   end
 
   delete '/posts/:id/delete' do
+puts "params= #{params}"
     @post = Post.find(params[:id])
     @post.destroy
     erb :delete
