@@ -35,6 +35,7 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/posts/:id' do
+test "params= #{params}"
     post = Post.find(params[:id])
     post.update(name: params[:name])
     post.update(content: params[:content])
