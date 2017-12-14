@@ -43,7 +43,7 @@ test "params= #{params}"
   end
 
   delete '/posts/:id/delete' do
-test "params= #{params}"
+# test "params= #{params}"
     @post = Post.find(params[:id])
     @post.destroy
     # @post = Post.find(params[:id])
